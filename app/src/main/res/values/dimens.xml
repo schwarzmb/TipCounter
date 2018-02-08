@@ -10,5 +10,14 @@
     <dimen name="oneHundredForty">140dp</dimen>
     <dimen name="oneHundredTwentyEight">128dp</dimen>
     <dimen name="oneHundredThirtyTwo">132dp</dimen>
+    <dimen name="fourtyFour">44dp</dimen>
+    <dimen name="twoHundredEightyEight">288dp</dimen>
+    <dimen name="seventyTwo">72dp</dimen>
+    <dimen name="ninetySix">96dp</dimen>
+    <dimen name="oneHundredTwentyFour">124dp</dimen>
+    <dimen name="twentyEight">28dp</dimen>
+    <dimen name="threeHundredThirtyTwo">332dp</dimen>
+    <dimen name="oneHundredThirtySix">136dp</dimen>
+    <dimen name="oneHundred">100dp</dimen>
 
 </resources>

@@ -10,7 +10,7 @@
         android:id="@+id/num_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eightyFour"
+        android:layout_marginStart="@dimen/fourtyFour"
         android:layout_marginTop="@dimen/sixteen"
         android:ems="10"
         android:hint="@string/num_people"
@@ -22,7 +22,7 @@
         android:id="@+id/bill_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eightyFour"
+        android:layout_marginStart="@dimen/fourtyFour"
         android:layout_marginTop="@dimen/twelve"
         android:ems="10"
         android:hint="@string/bill_amount"
@@ -34,11 +34,11 @@
         android:id="@+id/tip_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eightyFour"
+        android:layout_marginStart="@dimen/twoHundredEightyEight"
         android:layout_marginTop="@dimen/sixteen"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bill_total">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/fifteen"
@@ -71,31 +71,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/eight"
-        android:layout_marginStart="@dimen/eight"
-        android:layout_marginTop="@dimen/oneHundredTwelve"
+        android:layout_marginTop="@dimen/oneHundred"
         android:ems="10"
         android:hint="@string/other_tip"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tip_group"
-        app:layout_constraintTop_toBottomOf="@+id/bill_total" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/reset_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/oneHundredSixteen"
-        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginStart="@dimen/seventyTwo"
+        android:layout_marginTop="@dimen/sixteen"
         android:text="@string/reset"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tip_group" />
+        app:layout_constraintTop_toBottomOf="@+id/bill_total" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/oneHundredForty"
-        android:layout_marginTop="@dimen/twelve"
+        android:layout_marginStart="@dimen/ninetySix"
+        android:layout_marginTop="@dimen/sixteen"
         android:text="@string/calc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reset_radio" />
@@ -104,17 +102,17 @@
         android:id="@+id/tipTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/oneHundredForty"
-        android:layout_marginTop="@dimen/twelve"
+        android:layout_marginStart="@dimen/oneHundredTwentyFour"
+        android:layout_marginTop="@dimen/twentyEight"
         android:text="@string/tipAmnt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+        app:layout_constraintStart_toEndOf="@+id/reset_radio"
+        app:layout_constraintTop_toBottomOf="@+id/tip_group" />
 
     <TextView
         android:id="@+id/fullTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/oneHundredTwentyEight"
+        android:layout_marginStart="@dimen/threeHundredThirtyTwo"
         android:layout_marginTop="@dimen/twelve"
         android:text="@string/totalAmnt"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,10 +122,10 @@
         android:id="@+id/individualTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/oneHundredThirtyTwo"
+        android:layout_marginStart="@dimen/oneHundredThirtySix"
         android:layout_marginTop="@dimen/twelve"
         android:text="@string/splitAmnt"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculate"
         app:layout_constraintTop_toBottomOf="@+id/tipTotal" />
 
 </android.support.constraint.ConstraintLayout>
