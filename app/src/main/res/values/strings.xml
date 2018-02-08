@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TipCounter</string>
+    <string name="num_people">Enter Number Of People: </string>
+    <string name="bill_amount">Bill Total:</string>
+    <string name="fifteen_percent">15% </string>
+    <string name="eighteen_percent">18% </string>
+    <string name="twenty_percent">20% </string>
+    <string name="other_amount">Other: </string>
+    <string name="other_tip">Enter Tip Amount: </string>
+    <string name="reset">Deselect Choices</string>
+    <string name="calc">Calculate</string>
+</resources>
