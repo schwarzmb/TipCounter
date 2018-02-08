@@ -54,9 +54,6 @@ public class TipScreen extends AppCompatActivity {
         calculateButton.setEnabled(false);
         tTotal.setText(null); fTotal.setText(null); indivTotal.setText(null);
 
-        //numPeople.setOnKeyListener(mKeyListener);
-
-
         //reset button will clear all text entries when selected
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +63,7 @@ public class TipScreen extends AppCompatActivity {
                 tTotal.setText(null); fTotal.setText(null); indivTotal.setText(null);
                 otherAmount.setVisibility(View.INVISIBLE);
                 calculateButton.setEnabled(false);
-                Toast.makeText(getApplicationContext(), "entries cleared", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.cleared), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -83,6 +80,9 @@ public class TipScreen extends AppCompatActivity {
                 }else if (total < 1){
                     showErrorAlert((getString(R.string.billError)), R.id.bill_total);
                 }else{
+                    if(tip < 15){
+                        Toast.makeText(getApplicationContext(),getString(R.string.cheapPerson), Toast.LENGTH_SHORT).show();
+                    }
                     double tipAmount = total * (tip * .01);
                     double totalWithTip = total + tipAmount;
                     double totalEachPays = totalWithTip / people;
@@ -145,27 +145,27 @@ public class TipScreen extends AppCompatActivity {
                 if(rb == radio15){
                     otherAmount.setVisibility(View.INVISIBLE);
                     tipSelected = "15";
-                    Toast.makeText(getApplicationContext(), "15% tip", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.fifteenTip), Toast.LENGTH_SHORT).show();
                     if(numPeople.getText().length() > 0 && billTotal.getText().length() > 0){
                         calculateButton.setEnabled(true);
                     }
                 }else if(rb == radio18){
                     otherAmount.setVisibility(View.INVISIBLE);
                     tipSelected = "18";
-                    Toast.makeText(getApplicationContext(), "18% tip", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.eighteenTip), Toast.LENGTH_SHORT).show();
                     if(numPeople.getText().length() > 0 && billTotal.getText().length() > 0){
                         calculateButton.setEnabled(true);
                     }
                 }else if(rb == radio20){
                     otherAmount.setVisibility(View.INVISIBLE);
                     tipSelected = "20";
-                    Toast.makeText(getApplicationContext(), "20% tip", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.twentyTip), Toast.LENGTH_SHORT).show();
                     if(numPeople.getText().length() > 0 && billTotal.getText().length() > 0){
                         calculateButton.setEnabled(true);
                     }
-                }else{
+                }else if(rb == radioOther){
                     otherAmount.setVisibility(View.VISIBLE);
-                    Toast.makeText(getApplicationContext(), "enter tip amount", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.enterTip), Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -193,6 +193,9 @@ public class TipScreen extends AppCompatActivity {
         savedInstanceState.putString(getString(R.string.peopleKey), numPeople.getText().toString());
         savedInstanceState.putString(getString(R.string.tipKey), tipSelected);
         savedInstanceState.putString(getString(R.string.totalKey), billTotal.getText().toString());
+        savedInstanceState.putString(getString(R.string.tipTotalKey),tTotal.getText().toString());
+        savedInstanceState.putString(getString(R.string.fullTotalKey), fTotal.getText().toString());
+        savedInstanceState.putString(getString(R.string.splitTotalKey), indivTotal.getText().toString());
 
     }
 
@@ -202,6 +205,9 @@ public class TipScreen extends AppCompatActivity {
         numPeople.setText(savedInstanceState.getString(getString(R.string.peopleKey)));
         billTotal.setText(savedInstanceState.getString(getString(R.string.totalKey)));
         tipSelected = savedInstanceState.getString(getString(R.string.tipKey));
+        tTotal.setText(savedInstanceState.getString(getString(R.string.tipTotalKey)));
+        fTotal.setText(savedInstanceState.getString(getString(R.string.fullTotalKey)));
+        indivTotal.setText(savedInstanceState.getString(getString(R.string.splitTotalKey)));
         if(numPeople.getText().length() > 0 && billTotal.getText().length() > 0 && tipSelected.length() > 0){
             calculateButton.setEnabled(true);
         }

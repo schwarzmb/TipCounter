@@ -18,4 +18,14 @@
     <string name="peopleKey">peopleKey</string>
     <string name="totalKey">totalKey</string>
     <string name="tipKey">tipKey</string>
+    <string name="cleared">entries cleared</string>
+    <string name="fifteenTip">15% tip</string>
+    <string name="eighteenTip">18% tip</string>
+    <string name="twentyTip">20% tip</string>
+    <string name="enterTip">custom tip</string>
+    <string name="tipTotalKey">tipTotalKey</string>
+    <string name="fullTotalKey">fullTotalKey</string>
+    <string name="splitTotalKey">splitTotalKey</string>
+    <string name="cheapPerson">A Tip less than 15% is pretty cheap&#8230;</string>
+
 </resources>
