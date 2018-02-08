@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="eightyFour">84dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="oneHundredTwelve">112dp</dimen>
+    <dimen name="oneHundredSixteen">116dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="oneHundredForty">140dp</dimen>
+    <dimen name="oneHundredTwentyEight">128dp</dimen>
+    <dimen name="oneHundredThirtyTwo">132dp</dimen>
+
+</resources>

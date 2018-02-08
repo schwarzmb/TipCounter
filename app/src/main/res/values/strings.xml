@@ -9,4 +9,13 @@
     <string name="other_tip">Enter Tip Amount: </string>
     <string name="reset">Deselect Choices</string>
     <string name="calc">Calculate</string>
+    <string name="tipAmnt">Total Tip: $%1$s</string>
+    <string name="totalAmnt">Total Amount: $%1$s</string>
+    <string name="splitAmnt">Split Amount: $%1$s</string>
+    <string name="peopleError">Too Few People Entered</string>
+    <string name="tipError">Tip Must Be Greater Than 1%</string>
+    <string name="billError">Bill Must Be Greater Than $1.00</string>
+    <string name="peopleKey">peopleKey</string>
+    <string name="totalKey">totalKey</string>
+    <string name="tipKey">tipKey</string>
 </resources>
